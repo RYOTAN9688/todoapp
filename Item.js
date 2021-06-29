@@ -4,8 +4,11 @@ import React from 'react';
 import { useState } from 'react';
 
 
-const Item = ({ content }) => {
+const Item = ({ content, id, deleteTodo }) => {
     const [isDone, setIsDone] = useState(false);//isDoneの初期値をfalseとする
+    const hundleDelete = () => {
+        deleteTodo(id)
+    }
     return (
         <>
             <li>
